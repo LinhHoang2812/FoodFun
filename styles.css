@@ -751,6 +751,7 @@ body {
   font-size: 1.2rem;
   text-decoration: none;
   color: gray;
+  margin-bottom: 1rem;
 }
 .meal-name:hover {
   font-weight: bold;
@@ -854,6 +855,9 @@ body {
 .ingredients-selection li {
   list-style-type: none;
 }
+.total-ingre {
+  margin-right: 1rem;
+}
 
 @media screen and (max-width: 800px) {
   .btn-container {
@@ -884,9 +888,6 @@ body {
   }
   .ingredients-detail {
     cursor: pointer;
-  }
-  .meal-name {
-    margin-bottom: 1rem;
   }
 }
 @media screen and (max-width: 350px) {
@@ -930,7 +931,7 @@ body {
 }
 
 .grocery-item {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 .single-grocery-item {
   display: flex;
@@ -964,9 +965,7 @@ body {
   margin-right: 2rem;
   margin-bottom: 1rem;
 }
-.clear-all-div {
-  text-align: center;
-}
+
 .grocery-close-btn {
   display: none;
 }
@@ -1023,7 +1022,7 @@ body {
   .single-grocery-item .done {
     width: 15px;
     height: 15px;
-    border-radius: 30%;
+    border-radius: 100%;
   }
   .more-input {
     width: 120px;

@@ -38,7 +38,7 @@ const displayLocalStorage = () => {
   </div>
   <div class="meal-summary" data-id="${id}">
   <a class="meal-name" href="recipe.html?id=${id}"><h4">${name}</h4></a>
-  <div><span>${totalIngredients} ingredients</span> <i class="fa-solid fa-circle-info ingredients-detail" data-id="${id}"></i></div>
+  <div><span class="total-ingre">${totalIngredients} ingredients</span> <i class="fa-solid fa-circle-info ingredients-detail" data-id="${id}"></i></div>
   <div><button class="make-it" data-id="${id}"><i class="fa-solid fa-circle-plus "></i></button> <span>Add all ingredients to shopping list</span></div>
   <div><button class="remove"><i class="fa-solid fa-trash remove"></i></button> <span>Remove recipe</span></div>
   
