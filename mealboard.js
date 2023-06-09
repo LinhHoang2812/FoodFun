@@ -3,7 +3,6 @@ const ingredientsSelection = document.querySelector(".ingredients-selection");
 const popup = document.querySelector(".ingredient-popup");
 const groceryContainer = document.querySelector(".grocery-container");
 const allOut = document.querySelector(".clear-all");
-console.log(allOut);
 const shoppingList = document.querySelector(".shopping-list");
 const groceryList = document.querySelector(".grocery-list");
 const groceryCloseBtn = document.querySelector(".grocery-close-btn");
@@ -50,6 +49,26 @@ const displayLocalStorage = () => {
     .join("")}`;
 
   mealsContainer.addEventListener("mouseover", (e) => {
+    if (e.target.classList.contains("ingredients-detail")) {
+      e.stopPropagation();
+      var dish = allMeals.find((dish) => dish.id === e.target.dataset.id);
+      const top = e.target.offsetTop;
+      const left = e.target.getBoundingClientRect().left + 20;
+      popup.style.display = "block";
+      popup.style.top = `${top}px`;
+      popup.style.left = `${left}px`;
+
+      const { simpleList } = dish;
+      ingredientsSelection.innerHTML = simpleList
+        .map((item) => {
+          return `<li><button class="add-to-list"><i class="fa-solid fa-circle-plus"></i></button>${item}</li>`;
+        })
+        .join("");
+    } else {
+      popup.style.display = "none";
+    }
+  });
+  mealsContainer.addEventListener("click", (e) => {
     if (e.target.classList.contains("ingredients-detail")) {
       e.stopPropagation();
       var dish = allMeals.find((dish) => dish.id === e.target.dataset.id);

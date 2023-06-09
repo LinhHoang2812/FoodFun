@@ -876,6 +876,9 @@ body {
   .shopping-list {
     display: block;
   }
+  .ingredients-detail {
+    cursor: pointer;
+  }
 }
 @media screen and (max-width: 350px) {
   .meal-img img {
@@ -1007,6 +1010,14 @@ body {
     border: none;
     cursor: pointer;
     color: gray;
+  }
+  .single-grocery-item .done {
+    width: 15px;
+    height: 15px;
+    border-radius: 60%;
+  }
+  .more-input {
+    width: 120px;
   }
 }
 
