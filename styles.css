@@ -873,11 +873,20 @@ body {
     width: 170px;
     font-size: 0.9rem;
   }
+  .ingredient-popup li {
+    margin-bottom: 0.5rem;
+  }
+  .ingredient-popup i {
+    margin-right: 0.5rem;
+  }
   .shopping-list {
     display: block;
   }
   .ingredients-detail {
     cursor: pointer;
+  }
+  .meal-name {
+    margin-bottom: 1rem;
   }
 }
 @media screen and (max-width: 350px) {
@@ -981,12 +990,12 @@ body {
   .grocery-list {
     display: none;
     position: fixed;
-    width: 80%;
-    height: 80%;
+    width: 90%;
+    height: 90%;
     background-color: white;
-    top: 10%;
-    left: 10%;
-    font-size: 0.8rem;
+    top: 5%;
+    left: 5%;
+    font-size: 0.9rem;
   }
   .grocery-list.show {
     display: block;
@@ -1014,7 +1023,7 @@ body {
   .single-grocery-item .done {
     width: 15px;
     height: 15px;
-    border-radius: 60%;
+    border-radius: 30%;
   }
   .more-input {
     width: 120px;
