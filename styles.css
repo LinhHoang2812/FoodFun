@@ -858,6 +858,9 @@ body {
 .total-ingre {
   margin-right: 1rem;
 }
+.meals-container i {
+  font-size: 1.5rem;
+}
 
 @media screen and (max-width: 800px) {
   .btn-container {
@@ -995,6 +998,7 @@ body {
     top: 5%;
     left: 5%;
     font-size: 0.9rem;
+    z-index: 99999999;
   }
   .grocery-list.show {
     display: block;
@@ -1022,7 +1026,8 @@ body {
   .single-grocery-item .done {
     width: 15px;
     height: 15px;
-    border-radius: 100%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
   }
   .more-input {
     width: 120px;

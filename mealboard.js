@@ -39,7 +39,7 @@ const displayLocalStorage = () => {
   <div class="meal-summary" data-id="${id}">
   <a class="meal-name" href="recipe.html?id=${id}"><h4">${name}</h4></a>
   <div><span class="total-ingre">${totalIngredients} ingredients</span> <i class="fa-solid fa-circle-info ingredients-detail" data-id="${id}"></i></div>
-  <div><button class="make-it" data-id="${id}"><i class="fa-solid fa-circle-plus "></i></button> <span>Add all ingredients to shopping list</span></div>
+  <div><button class="make-it" data-id="${id}"><i class="fa-solid fa-circle-plus plus-all"></i></button> <span>Add all ingredients to shopping list</span></div>
   <div><button class="remove"><i class="fa-solid fa-trash remove"></i></button> <span>Remove recipe</span></div>
   
   
@@ -96,8 +96,10 @@ const displayLocalStorage = () => {
       mealsContainer.removeChild(itemToDelete);
       const id = e.target.parentElement.parentElement.parentElement.dataset.id;
       deteleteFromLocalStorage(id);
-    } else if (e.target.classList.contains("make-it")) {
-      var dish = allMeals.find((dish) => dish.id === e.target.dataset.id);
+    } else if (e.target.classList.contains("plus-all")) {
+      var dish = allMeals.find(
+        (dish) => dish.id === e.target.parentElement.dataset.id
+      );
       const { simpleList } = dish;
       simpleList.forEach((item) => {
         addToGroceryList(item);
