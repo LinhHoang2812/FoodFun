@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS style -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/08cbb4f779.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Food Fun</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="nav">
+      <div class="nav-center">
+        <div class="nav-header">
+          <img src="images/funfood-logo.png" alt="logo" />
+          <button class="btn toggle-btn">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+        <div class="nav-links">
+          <li>
+            <button class="link-btn">home</button>
+          </li>
+          <li>
+            <button class="link-btn">mealboard</button>
+          </li>
+          <li>
+            <button class="link-btn">about</button>
+          </li>
+        </div>
+
+        <div class="log-btns">
+          <button type="button" class="login-btn">Log in</button>
+          <button type="button" class="logout-btn">Log out</button>
+        </div>
+      </div>
+    </nav>
+    <img src="images/strawberry-grain.png" alt="" class="corner-image" />
+
+    <!-- sidebar -->
+    <div class="sidebar-wrapper">
+      <aside class="sidebar">
+        <button class="close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="sidebar-links"></div>
+      </aside>
+    </div>
+    <!-- links  -->
+    <aside class="submenu"></aside>
+
+    <!-- login section -->
+    <section class="login-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="page-heading">
+              <h1>Log In</h1>
+              <span class="subheading">Welcome Back!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <section class="footer">
+      <footer class="footer-container"></footer>
+    </section>
+
+    <!-- copyright -->
+    <div class="copyright"><small>© 2023 by Linh Hoang</small></div>
+
+    <!-- bootstrap javascript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="nav.js"></script>
+    <script src="recipe.js"></script>
+  </body>
+</html>
