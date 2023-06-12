@@ -29,12 +29,11 @@ body {
   display: none;
   text-align: center;
   width: 50px;
-  height: 35px;
-  border: 1px solid rgb(107, 54, 54);
-  border-radius: 7px;
-  background: rgb(151, 82, 82);
-  color: white;
-  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: none;
+  background: transparent;
+  color: rgb(107, 54, 54);
+  font-size: 1.5rem;
   cursor: pointer;
 }
 .nav-links {
@@ -68,8 +67,6 @@ body {
 .logout-btn,
 .signup-btn,
 .save-btn {
-  /* width: 100px; */
-  /* height: 40px; */
   border: 1px solid rgb(107, 54, 54);
   border-radius: 7px;
   background: rgb(151, 82, 82);
@@ -1025,13 +1022,14 @@ body {
     color: gray;
   }
   .single-grocery-item .done {
-    width: 15px;
-    height: 15px;
-    border-radius: 15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 100px;
   }
-  /* .more-input {
+  .more-input {
     width: 120px;
-  } */
+  }
 }
 
 /* style log in  */
