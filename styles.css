@@ -1023,9 +1023,9 @@ body {
   }
   .single-grocery-item .done {
     width: 5px;
-    height: 15px;
+    height: 10px;
     border-radius: 50%;
-    -webkit-border-radius: 50%;
+    padding: 0;
   }
   .more-input {
     width: 120px;
