@@ -33,7 +33,7 @@ body {
   border-radius: none;
   background: transparent;
   color: rgb(107, 54, 54);
-  font-size: 1.5rem;
+  font-size: 2rem;
   cursor: pointer;
 }
 .nav-links {
@@ -186,15 +186,15 @@ body {
   .hero-info h1 {
     font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   .hero-info p {
     font-size: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   .hero-center {
-    margin-top: 14rem;
+    margin-top: 13rem;
   }
   .nav-header img {
     width: 250px;
@@ -213,7 +213,7 @@ body {
     margin-bottom: 1rem;
   }
   .hero-center {
-    margin-top: 12rem;
+    margin-top: 11rem;
   }
   .nav-header img {
     width: 200px;
@@ -1022,10 +1022,10 @@ body {
     color: gray;
   }
   .single-grocery-item .done {
-    width: 10px;
-    height: 10px;
+    width: 5px;
+    height: 15px;
     border-radius: 50%;
-    -webkit-border-radius: 100px;
+    -webkit-border-radius: 50%;
   }
   .more-input {
     width: 120px;
