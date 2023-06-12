@@ -1022,8 +1022,8 @@ body {
     color: gray;
   }
   .single-grocery-item .done {
-    width: 5px;
-    height: 10px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     padding: 0;
   }
