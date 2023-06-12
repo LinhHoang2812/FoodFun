@@ -197,7 +197,7 @@ body {
     margin-bottom: 2rem;
   }
   .hero-center {
-    margin-top: 18rem;
+    margin-top: 14rem;
   }
   .nav-header img {
     width: 250px;
@@ -216,7 +216,7 @@ body {
     margin-bottom: 1rem;
   }
   .hero-center {
-    margin-top: 16rem;
+    margin-top: 12rem;
   }
   .nav-header img {
     width: 200px;
@@ -751,14 +751,13 @@ body {
   font-size: 1.2rem;
   text-decoration: none;
   color: gray;
-  margin-bottom: 1rem;
 }
 .meal-name:hover {
   font-weight: bold;
 }
 .meal-btns button {
   width: 260px;
-  height: 50px;
+  /* height: 50px; */
   border: 1px solid rgb(107, 54, 54);
   border-radius: 20px;
   background: rgb(151, 82, 82);
@@ -800,6 +799,7 @@ body {
 .meal-summary {
   display: flex;
   flex-direction: column;
+  row-gap: 2rem;
 }
 
 .meal-img img {
@@ -818,12 +818,6 @@ body {
   background-color: transparent;
   text-align: left;
   color: rgb(107, 54, 54);
-}
-
-.meal-summary {
-  display: flex;
-  flex-direction: column;
-  row-gap: 1rem;
 }
 
 .ingredient-popup {
@@ -945,11 +939,17 @@ body {
   width: 20px;
   height: 20px;
   font-size: 1.5rem;
+  -webkit-border-radius: 50%;
   border-radius: 50%;
   border: 2px solid gray;
   background-color: white;
   margin-right: 1rem;
 }
+
+.single-grocery-item .done.bought {
+  background-color: rgb(107, 54, 54);
+}
+
 .single-grocery-item .delete {
   border: none;
   background-color: transparent;
@@ -980,6 +980,7 @@ body {
   margin-bottom: 1rem;
 }
 .more-input {
+  width: 70%;
   border: none;
   color: gray;
   text-transform: capitalize;
@@ -1026,16 +1027,33 @@ body {
   .single-grocery-item .done {
     width: 15px;
     height: 15px;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
+    border-radius: 15px;
   }
-  .more-input {
+  /* .more-input {
     width: 120px;
-  }
+  } */
 }
 
 /* style log in  */
 .login-section,
 .register-section {
   margin-top: 10rem;
+}
+
+/* test */
+.save-btn-a {
+  width: 250px;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid rgb(107, 54, 54);
+  border-radius: 7px;
+  background: rgb(151, 82, 82);
+  color: white;
+  padding: 0.5rem;
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  height: 40px;
+  border-radius: 20px;
+  align-self: end;
 }

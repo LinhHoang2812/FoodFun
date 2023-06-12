@@ -157,10 +157,18 @@ const displayLocalGroceries = () => {
     const doneBtn = article.querySelector(".done");
     const deleteBtn = article.querySelector(".delete");
     doneBtn.addEventListener("click", (e) => {
-      e.currentTarget.style.backgroundColor = "rgb(107, 54, 54)";
-      deleteFromLocalGrocery(
-        e.currentTarget.parentElement.parentElement.parentElement.dataset.id
-      );
+      if (!e.currentTarget.classList.contains("bought")) {
+        e.currentTarget.classList.add("bought");
+        deleteFromLocalGrocery(
+          e.currentTarget.parentElement.parentElement.parentElement.dataset.id
+        );
+      } else {
+        e.currentTarget.classList.remove("bought");
+        addToLocalGrocery(
+          e.currentTarget.nextElementSibling.textContent,
+          e.currentTarget.parentElement.parentElement.parentElement.dataset.id
+        );
+      }
     });
 
     deleteBtn.addEventListener("click", (e) => {
@@ -237,11 +245,18 @@ function addToGroceryList(item) {
   const doneBtn = article.querySelector(".done");
   const deleteBtn = article.querySelector(".delete");
   doneBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    e.currentTarget.style.backgroundColor = "rgb(107, 54, 54)";
-    deleteFromLocalGrocery(
-      e.currentTarget.parentElement.parentElement.parentElement.dataset.id
-    );
+    if (!e.currentTarget.classList.contains("bought")) {
+      e.currentTarget.classList.add("bought");
+      deleteFromLocalGrocery(
+        e.currentTarget.parentElement.parentElement.parentElement.dataset.id
+      );
+    } else {
+      e.currentTarget.classList.remove("bought");
+      addToLocalGrocery(
+        e.currentTarget.nextElementSibling.textContent,
+        e.currentTarget.parentElement.parentElement.parentElement.dataset.id
+      );
+    }
   });
 
   deleteBtn.addEventListener("click", (e) => {
@@ -270,7 +285,7 @@ function addMoreIngredient() {
         </div>
         <button class="delete"><i class="fa-solid fa-trash"></i></button>
          </div>`;
-  groceryContainer.appendChild(article);
+  groceryContainer.prepend(article);
   const input = article.querySelector("input");
   input.addEventListener("change", () => {
     addToLocalGrocery(input.value, id);
@@ -279,10 +294,18 @@ function addMoreIngredient() {
   const doneBtn = article.querySelector(".done");
   const deleteBtn = article.querySelector(".delete");
   doneBtn.addEventListener("click", (e) => {
-    e.currentTarget.style.backgroundColor = "rgb(107, 54, 54)";
-    deleteFromLocalGrocery(
-      e.currentTarget.parentElement.parentElement.parentElement.dataset.id
-    );
+    if (!e.currentTarget.classList.contains("bought")) {
+      e.currentTarget.classList.add("bought");
+      deleteFromLocalGrocery(
+        e.currentTarget.parentElement.parentElement.parentElement.dataset.id
+      );
+    } else {
+      e.currentTarget.classList.remove("bought");
+      addToLocalGrocery(
+        e.currentTarget.nextElementSibling.value,
+        e.currentTarget.parentElement.parentElement.parentElement.dataset.id
+      );
+    }
   });
 
   deleteBtn.addEventListener("click", (e) => {

@@ -70,7 +70,16 @@ const displaySingleRecipe = async () => {
   </div>
   
   </div>
-  <button class="save-btn">Save to mealboard</button>
+  <a
+  class="save-btn-a"
+  href = "mealboard.html">
+
+  Save to mealboard
+
+  </a>
+  
+  
+  
   
   </div>
   `;
@@ -100,9 +109,9 @@ const displaySingleRecipe = async () => {
   }
 
   //save to mealboard
-  const saveBtn = document.querySelector(".save-btn");
+  const saveBtn = document.querySelector(".save-btn-a");
 
-  saveBtn.addEventListener("click", () => {
+  saveBtn.addEventListener("click", (e) => {
     addLocalStorage(id, name, image, totalIngredients, simpleList);
   });
 };
@@ -128,3 +137,14 @@ function addLocalStorage(id, name, image, totalIngredients, simpleList) {
   list.push(meal);
   localStorage.setItem("meals", JSON.stringify(list));
 }
+
+// const popoverTriggerList = document.querySelectorAll(
+//   '[data-bs-toggle="popover"]'
+// );
+
+// const popoverList = [...popoverTriggerList].map(
+//   (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
+// );
+// const popover = new bootstrap.Popover(".popover-dismiss", {
+//   trigger: "focus",
+// });
