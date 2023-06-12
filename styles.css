@@ -1028,7 +1028,13 @@ body {
     padding: 0;
   }
   .more-input {
-    width: 120px;
+    width: 170px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .more-input {
+    width: 130px;
   }
 }
 
